@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hongye Wang | AI Data Portfolio (xAI Target)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif; background-color: #f8fafc; }
+        .mono { font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace; }
+        /* 模拟标注工具的标签样式 */
+        .tag-breath { background-color: #e0f2fe; color: #0284c7; padding: 2px 4px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; border: 1px solid #bae6fd; }
+        .tag-filler { background-color: #fef08a; color: #854d0e; padding: 2px 4px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; border: 1px solid #fde047; }
+        .tag-stress { background-color: #fecdd3; color: #be123c; padding: 2px 4px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; border: 1px solid #fda4af; text-decoration: underline; }
+        .tag-dialect { background-color: #e9d5ff; color: #6b21a8; padding: 2px 4px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; border: 1px solid #d8b4fe; }
+        .audio-card { cursor: pointer; }
+        .audio-card[data-state="playing"] { background-color: #ecfdf5; border-color: #86efac; }
+        .audio-card[data-state="error"] { background-color: #fff1f2; border-color: #fda4af; }
+        .audio-card .pause-icon { display: none; }
+        .audio-card[data-state="playing"] .play-icon { display: none; }
+        .audio-card[data-state="playing"] .pause-icon { display: block; }
+    </style>
+</head>
+<body class="text-slate-900 antialiased py-12">
+
+    <div class="max-w-4xl mx-auto px-6">
+        <nav class="mb-6 flex justify-end">
+            <a href="index.html" class="text-sm font-bold text-slate-700 hover:text-black border border-slate-200 bg-white px-4 py-2 rounded-lg shadow-sm transition">Back to Resume</a>
+        </nav>
+        
+        <!-- Header -->
+        <header class="mb-10 border-b-2 border-slate-900 pb-6">
+            <h1 class="text-4xl font-extrabold tracking-tight mb-2">Hongye Wang - Audio & Transcription Portfolio</h1>
+            <p class="text-lg text-slate-600 font-medium">Demonstrating Forensic-Level Acoustic Acuity & SFT Data Engineering</p>
+        </header>
+
+        <!-- Script 1: Code-switching -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 mb-8 hover:shadow-md transition">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <h3 class="text-2xl font-bold tracking-tight">01. High-Density Code-Switching</h3>
+                    <p class="text-sm font-mono text-slate-500 mt-1">Scenario: Tech industry frustration / Fast-paced Chinglish</p>
+                </div>
+                <span class="bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wide">Script 1</span>
+            </div>
+
+            <!-- Audio Mockup -->
+            <button type="button" class="audio-card w-full mb-6 bg-slate-50 border border-slate-200 rounded-lg p-4 flex items-center justify-between text-left transition" data-audio="audio-1">
+                <div class="flex items-center space-x-3">
+                    <span class="w-10 h-10 bg-black rounded-full flex items-center justify-center">
+                        <svg class="play-icon w-5 h-5 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                        <svg class="pause-icon w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M5 4h3v12H5V4zm7 0h3v12h-3V4z"></path></svg>
+                    </span>
+                    <span>
+                        <span class="block text-sm font-medium text-slate-700">rec_tech_oom_issue.wav</span>
+                        <span class="audio-status block text-xs text-slate-500">Click to play</span>
+                    </span>
+                </div>
+                <span class="text-xs text-slate-500 mono">Length: 00:12</span>
+                <audio id="audio-1" preload="metadata" src="audio/rec_tech_oom_issue.wav"></audio>
+            </button>
+
+            <div class="mb-6">
+                <h4 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Forensic-Level Transcription</h4>
+                <div class="mono bg-slate-50 border border-slate-200 p-5 rounded-lg text-sm leading-loose text-slate-800">
+                    <span class="tag-filler">[Filler: 其实]</span> 这个 pipeline 跑不通，<span class="tag-breath">&lt;breath=0.2s&gt;</span> 主要还是因为 data loader 那边 <span class="tag-stress">&lt;stress&gt;OOM&lt;/stress&gt;</span> 了。<span class="tag-filler">[Filler: 呃]</span> 你不能总是 brute-force 去 fetch 数据，尤其是遇到 edge case 的时候，整个 server 直接就挂了。
+                </div>
+            </div>
+
+            <div class="bg-slate-100 border-l-4 border-slate-500 p-4">
+                <h4 class="text-sm font-bold text-slate-800 mb-1">Model Training Insight</h4>
+                <p class="text-sm text-slate-600">Demonstrates the ability to accurately transcribe rapid transitions between Mandarin phonetics and English tech jargon (OOM, brute-force) without losing the natural prosody or dropping implicit filler words.</p>
+            </div>
+        </section>
+
+        <!-- Script 2: Prosody & Human Messiness -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 mb-8 hover:shadow-md transition">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <h3 class="text-2xl font-bold tracking-tight">02. Human Prosody & Micro-Stutters</h3>
+                    <p class="text-sm font-mono text-slate-500 mt-1">Scenario: Self-correction and emotional hesitation</p>
+                </div>
+                <span class="bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wide">Script 2</span>
+            </div>
+
+            <!-- Audio Mockup -->
+            <button type="button" class="audio-card w-full mb-6 bg-slate-50 border border-slate-200 rounded-lg p-4 flex items-center justify-between text-left transition" data-audio="audio-2">
+                <div class="flex items-center space-x-3">
+                    <span class="w-10 h-10 bg-black rounded-full flex items-center justify-center">
+                        <svg class="play-icon w-5 h-5 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                        <svg class="pause-icon w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M5 4h3v12H5V4zm7 0h3v12h-3V4z"></path></svg>
+                    </span>
+                    <span>
+                        <span class="block text-sm font-medium text-slate-700">rec_hesitation_correction.wav</span>
+                        <span class="audio-status block text-xs text-slate-500">Click to play</span>
+                    </span>
+                </div>
+                <span class="text-xs text-slate-500 mono">Length: 00:09</span>
+                <audio id="audio-2" preload="metadata" src="audio/rec_hesitation_correction.wav"></audio>
+            </button>
+
+            <div class="mb-6">
+                <h4 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Forensic-Level Transcription</h4>
+                <div class="mono bg-slate-50 border border-slate-200 p-5 rounded-lg text-sm leading-loose text-slate-800">
+                    那个…… <span class="tag-filler">[Filler: 就是]</span> 关于 Transformer 的 <span class="text-red-500 line-through">架构</span> <span class="tag-breath">&lt;sigh=0.4s&gt;</span> <span class="bg-red-100 text-red-800 px-1 rounded text-xs font-bold">[Self-Correction Start]</span> 算了我重新说 <span class="bg-red-100 text-red-800 px-1 rounded text-xs font-bold">[End]</span>，它的 attention 机制瓶颈到底在哪？
+                </div>
+            </div>
+
+            <div class="bg-slate-100 border-l-4 border-slate-500 p-4">
+                <h4 class="text-sm font-bold text-slate-800 mb-1">Annotation Objective</h4>
+                <p class="text-sm text-slate-600">Standard ASR models usually delete stutters and sighs, creating a "clean but fake" transcript. This forensic annotation captures the exact acoustic reality, crucial for training highly empathetic and natural-sounding Voice AIs.</p>
+            </div>
+        </section>
+
+        <!-- Script 3: Dialect / Henan Edge Case -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 mb-8 hover:shadow-md transition">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <h3 class="text-2xl font-bold tracking-tight">03. Edge-Case Dialect (Central Plains)</h3>
+                    <p class="text-sm font-mono text-slate-500 mt-1">Scenario: Regional vocabulary and ASR hallucination risks</p>
+                </div>
+                <span class="bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wide">Script 3</span>
+            </div>
+
+            <!-- Audio Mockup -->
+            <button type="button" class="audio-card w-full mb-6 bg-slate-50 border border-slate-200 rounded-lg p-4 flex items-center justify-between text-left transition" data-audio="audio-3">
+                <div class="flex items-center space-x-3">
+                    <span class="w-10 h-10 bg-black rounded-full flex items-center justify-center">
+                        <svg class="play-icon w-5 h-5 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                        <svg class="pause-icon w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M5 4h3v12H5V4zm7 0h3v12h-3V4z"></path></svg>
+                    </span>
+                    <span>
+                        <span class="block text-sm font-medium text-slate-700">rec_henan_dialect_night.wav</span>
+                        <span class="audio-status block text-xs text-slate-500">Click to play</span>
+                    </span>
+                </div>
+                <span class="text-xs text-slate-500 mono">Length: 00:08</span>
+                <audio id="audio-3" preload="metadata" src="audio/rec_henan_dialect_night.wav"></audio>
+            </button>
+
+            <div class="mb-6">
+                <h4 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Dialect Alignment to Standard SFT</h4>
+                <div class="mono bg-slate-50 border border-slate-200 p-5 rounded-lg text-sm leading-loose text-slate-800">
+                    <div class="mb-3">
+                        <span class="font-bold text-slate-500 mr-2">Raw Audio:</span> 
+                        这半夜三更的，你 <span class="tag-dialect">搁外头瞎溜达啥咧</span>？赶紧回屋去，外头 <span class="tag-dialect">怪冷哩</span>。
+                    </div>
+                    <div class="border-t border-slate-200 pt-3">
+                        <span class="font-bold text-emerald-600 mr-2">Standard Intent (SFT Target):</span> 
+                        这半夜三更的，你<span class="text-emerald-700 font-bold underline decoration-emerald-300">在外面瞎逛什么呢</span>？赶紧回屋去，外面<span class="text-emerald-700 font-bold underline decoration-emerald-300">挺冷的</span>。
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-100 border-l-4 border-slate-500 p-4">
+                <h4 class="text-sm font-bold text-slate-800 mb-1">Data Pipeline Rationale</h4>
+                <p class="text-sm text-slate-600">Resolves ASR hallucinations caused by regional grammar ("搁...啥咧" -> "在...什么呢"). Extracts the underlying semantic intent for reliable Supervised Fine-Tuning (SFT) mapping.</p>
+            </div>
+        </section>
+
+    </div>
+    <script>
+        const cards = Array.from(document.querySelectorAll(".audio-card"));
+
+        function setCardState(card, state, label) {
+            card.dataset.state = state;
+            card.querySelector(".audio-status").textContent = label;
+        }
+
+        cards.forEach((card) => {
+            const audio = document.getElementById(card.dataset.audio);
+
+            card.addEventListener("click", async () => {
+                if (card.dataset.state === "playing") {
+                    audio.pause();
+                    setCardState(card, "idle", "Click to play");
+                    return;
+                }
+
+                cards.forEach((otherCard) => {
+                    const otherAudio = document.getElementById(otherCard.dataset.audio);
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;
+                        setCardState(otherCard, "idle", "Click to play");
+                    }
+                });
+
+                try {
+                    await audio.play();
+                    setCardState(card, "playing", "Playing");
+                } catch (error) {
+                    setCardState(card, "error", "Audio file not found yet");
+                }
+            });
+
+            audio.addEventListener("ended", () => setCardState(card, "idle", "Click to play"));
+            audio.addEventListener("error", () => setCardState(card, "error", "Audio file not found yet"));
+        });
+    </script>
+</body>
+</html>

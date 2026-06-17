@@ -22,6 +22,16 @@
 </head>
 <body class="bg-gray-50 text-gray-900 py-10">
 
+    <!-- Action Bar (Hidden during printing) -->
+    <div class="max-w-4xl mx-auto mb-4 flex justify-end gap-3 no-print">
+        <a href="portfolio.html" class="bg-white hover:bg-gray-100 text-black font-semibold py-2 px-6 rounded shadow-md border border-gray-200 transition duration-300">
+            View Audio Portfolio
+        </a>
+        <button onclick="window.print()" class="bg-black hover:bg-gray-800 text-white font-semibold py-2 px-6 rounded shadow-md transition duration-300">
+            🖨️ Print / Export to PDF
+        </button>
+    </div>
+
     <!-- Resume Container -->
     <div class="max-w-4xl mx-auto bg-white p-12 shadow-xl print-shadow-none print-p-0 border-t-8 border-black">
         
